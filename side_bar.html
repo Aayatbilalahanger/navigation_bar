@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side_navigation bar</title>
+    <style>
+        /* you can use external sheet */
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        #sidenav{
+            height: 100%;
+            width:200px;
+            background-color: black;
+            position: fixed;
+            left: 0px;
+            transition: 0.5;
+
+        }
+        a{
+            color: white;
+            text-decoration-line: none;
+            display: block;
+            padding-top: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+        span{
+            cursor: pointer;
+            
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="sidenav">
+        <a onclick="myclose()">&times;</a>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICE</a>
+        <a href="#">CONTACT US</a>
+
+
+
+    </div>
+    <span onclick="myopen()">&#9776;</span>
+    <!-- <p></p> -->
+    
+</body>
+<script>
+    // you can use external sheet 
+    function myopen(){
+        document.getElementById("sidenav").style.left = "0px";
+
+    }
+    function myclose(){
+        document.getElementById("sidenav").style.left = "-300px";
+    }
+
+</script>
+</html>
